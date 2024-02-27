@@ -282,23 +282,23 @@ function generatesingle_noisyTable(tableId, filenames, page) {
   }
 }
 noisy_filelist = ["121-121726-0006_61-70970-0003","2300-131720-0041_1284-1180-0023","5142-36377-0005_6930-81414-0019","1089-134686-0007_7021-85628-0018","2300-131720-0036_7176-92135-0006","5105-28240-0017_6930-81414-0015","121-127105-0011_4970-29095-0009","121-127105-0028_4507-16021-0025","6829-68769-0012_1284-1181-0001"]
-generatemulti_noisyTable('anonymous', noisy_filelist  , 1);
+generatemulti_noisyTable('leying', noisy_filelist  , 1);
 
 
 clean_filelist = ["2830-3980-0072_3575-170457-0021","4992-41806-0015_260-123440-0020","5142-36377-0002_6930-75918-0002","1089-134691-0025_8224-274384-0005","260-123286-0023_2830-3980-0030","8224-274381-0013_1320-122617-0013","121-127105-0011_4970-29095-0009","3575-170457-0009_8555-284447-0023","8555-284447-0004_5683-32879-0000"]
-generatemulti_cleanTable('anonymous-clean', clean_filelist  , 1);
+generatemulti_cleanTable('leying-clean', clean_filelist  , 1);
 
 
 // enh_filelist =  ['1089-134686-0034_5639-40744-0005','1320-122617-0021_5105-28233-0002','2830-3980-0052_8455-210777-0035']
-// generatesingle_noisyTable('anonymous-enh', enh_filelist  , 1);
+// generatesingle_noisyTable('leying-enh', enh_filelist  , 1);
 
 
 $(document).ready(function() {
   for (let i = 1; i <= 3; i++) {
-    let id = '#anonymous-' + i;
+    let id = '#leying-' + i;
     $(id).click(function() {
       generatemulti_noisyTable(
-          'anonymous',
+          'leying',
           noisy_filelist, i);
       $(id).parent().siblings().removeClass('active');
       $(id).parent().addClass('active');
@@ -309,10 +309,10 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   for (let i = 1; i <= 3; i++) {
-    let id = '#anonymous-clean-' + i;
+    let id = '#leying-clean-' + i;
     $(id).click(function() {
       generatemulti_cleanTable(
-          'anonymous-clean',
+          'leying-clean',
           clean_filelist, i);
       $(id).parent().siblings().removeClass('active');
       $(id).parent().addClass('active');
